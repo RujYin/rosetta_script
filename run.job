@@ -1,0 +1,20 @@
+#!/bin/bash
+##NECESSARY JOB SPECIFICATIONS
+#SBATCH --job-name=rosetta_score            # Sets the job name to rosetta_score
+#SBATCH --time=24:00:00			# Sets the runtime limit to 24 hr
+#SBATCH --ntasks=1                   # Requests 1 core
+#SBATCH --ntasks-per-node=1          # Requests 1 core per node (1 node)
+#SBATCH --mem=7G                     # Requests 7GB of memory per node
+#SBATCH --error=rosetta_score.job.e%J       # Sends stderr to rosetta_score.job.e[jobID]
+#SBATCH --output=rosetta_score.job.o%J      # Sends stdout to rosetta_score.job.o[jobID]
+
+# setup your environment to run Rosetta
+ml purge                              # purge all module
+module load GCC/13.2.0 OpenMPI/4.1.6 Rosetta/3.14-mpi             # load the module for Rosetta
+
+# open the directory where the script is located
+cd /scratch/user/yihaoy/NH2/  # change to the directory where the script is located
+# run.sh script
+bash /scratch/user/yihaoy/NH2/run.sh  # execute the run.sh script
+
+exit                                  # exit when the job is done
