@@ -1,10 +1,11 @@
-##
-
-## the log
+## Run Rosetta for scoring of protein-peptide binding with PTMs -PCA and -NH2
 
 
 ## installation
-
+On grace hprc, load the software.
+```
+module load Rosetta/3.14-mpi
+```
 
 ## usage
 The steps are divided into structure refinement and structure ranking
