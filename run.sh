@@ -1,9 +1,9 @@
 #!/bin/bash
 ##module load GCC/13.2.0 OpenMPI/4.1.6 Rosetta/3.14-mpi
-cif_dir="/scratch/user/yihaoy/NH2/checked_models/normal"
-#output_dir="/scratch/user/yihaoy/NH2/checked_models/output"
+cif_dir="./checked_models/normal"
+#output_dir="./checked_models/output"
 #    -flexPepDocking:flexpep_score_only -ex1 -ex2aro -use_input_sc \
-output_dir="/scratch/user/yihaoy/NH2/checked_models/refine_output"
+output_dir="./checked_models/refine_output"
 pdb_files=("${cif_dir}"/*.pdb)
 total=${#pdb_files[@]}
 count=0
